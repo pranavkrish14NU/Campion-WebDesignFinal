@@ -1,0 +1,139 @@
+@import 'variables';
+@import 'mixins';
+.star-rating {
+  display: $flex-display;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.star-rating div {
+  font-size: 24px;
+}
+
+.bold-text {
+  font-weight: $font-weight-bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.review-input{
+  margin:0px;
+}
+
+.review-input textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  background: transparent;
+  border: 0.75px solid grey;
+}
+.review-input textarea:focus{
+  border:none;
+  border-color: grey;
+  /* outline: none; */
+  outline-color: grey;
+}
+
+.review-input button{
+  background: 200px/200px
+    url(https://assets.thedyrt.com/next/public/assets/images/NoiseOverlay_Dark@2x.png),
+  linear-gradient(180deg, #397c70, #1a4e3d 82.11%);
+}
+
+.scrollable-reviews {
+  max-height: 300px; /* Adjust the height as needed */
+  overflow-y: auto;
+  border: 0.75px solid grey; /* Optional: Add a border for better visibility */
+  padding: 5px; /* Optional: Add some padding for better appearance */
+}
+
+.review-item {
+  display: $flex-display;
+  flex-direction: $flex-direction-column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 5px;
+  padding:0px;
+}
+
+.review-item p{
+  margin-bottom:5px;
+}
+
+.review-box {
+  display: $flex-display;
+  width: 100%;
+}
+
+.delete-icon{
+  margin: 8px 10px 0 20px;
+}
+.booking-button {
+  /* margin-left: 85px;
+  width: 100px;
+  border-radius: 5px;
+  border-color: #007bff; */
+
+
+  /* margin-top: 30px; */
+padding: 8px; /* Adjust the padding to control the button size */
+font-size: 14px; 
+/* background-color: #007bff; */
+width: 100px;
+color: #fff;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+/* margin-left: 20px; */
+}
+
+.review-section {
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+  /* background-color: #fff; */
+}
+
+.review-section button {
+  /* margin-top: 30px; */
+  padding: 8px; 
+  font-size: 14px; 
+  /* background-color: #007bff; */
+  width: 100px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.review-input button:hover{
+  background-color: #006aff;
+
+}
+
+.booking-button button:hover{
+  background-color: #006aff;
+
+}
+
+.average-rating{
+  display: $flex-display;
+  align-items: $align-items-center;
+  justify-content: flex-start;
+  margin-bottom:10px;
+  margin-top:0px
+}
+
+.average-rating div{
+  margin:0px;
+  margin-left: 20px;
+  margin-bottom: 0.5rem;
+  padding: 0px;
+  height: auto;
+}
+
+
+.all-reviews h5{
+  margin-bottom:20px;
+  margin-top: 30px;
+}
+
+

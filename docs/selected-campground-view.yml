@@ -1,0 +1,201 @@
+openapi: 3.0.0
+info:
+  title: Campground API
+  description: Rest API for viewing campground
+  version: 'v1.0'
+servers:
+  - url: http://localhost:8080
+paths:
+  /campground/{id}:
+    get:
+      operationId: view-campground
+      description: To fetch details of the selected campground
+      responses:
+        "200":
+          description: Display the selected campground
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/campground'
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                code: 400
+                message: Bad request
+        "404":
+          description: Campgrounds not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+ 
+      parameters:
+        - name: id
+          in: path
+          description: ID of the campsite
+          required: true
+          schema:
+            type: number
+          example: 1
+ 
+        - name: campsiteName
+          in: query
+          description: Name of the campsite
+          required: true
+          schema:
+            type: string
+          example: "Awesome Campsite"
+ 
+        - name: campsiteImage
+          in: query
+          description: Image of the campsite
+          required: true
+          schema:
+            type: string
+          example: "http://server.com/path/to/image.jpg"
+ 
+        - name: campsiteLocation
+          in: query
+          description: Location of the campsite
+          required: true
+          schema:
+            type: string
+          example: "Mountain View"
+ 
+        - name: campTypes
+          in: query
+          description: Types of camps available
+          required: true
+          schema:
+            type: array
+            items:
+              type: string
+          example: ["Tent", "RV", "Cabin"]
+ 
+        - name: campDescription
+          in: query
+          description: Description of the campsite
+          required: true
+          schema:
+            type: string
+ 
+        - name: campPrices
+          in: query
+          description: Prices for each camp type
+          required: true
+          schema:
+            type: array
+            items:
+              type: number
+          example: [30.0, 50.0, 100.0]
+ 
+        - name: campReview
+          in: query
+          description: Review of the campsite
+          required: true
+          schema:
+            type: string
+ 
+        - name: campRating
+          in: query
+          description: Rating of the campsite
+          required: true
+          schema:
+            type: integer
+            format: int32
+ 
+        - name: campDate
+          in: query
+          description: Date for campsite availability
+          required: true
+          schema:
+            type: string
+            format: date
+            pattern: '^\d{4}-\d{2}-\d{2}$'
+ 
+        - name: campAvailability
+          in: query
+          description: Availability of the campsite
+          required: true
+          schema:
+            type: boolean
+ 
+components:
+  schemas:
+    campground:
+      type: object
+      properties:
+        id:
+          type: number
+          description: Id of the campsite
+          example: 1
+
+        name:
+          type: string
+          description: Name of the campsite
+          example: Awesome campsite
+
+        image:
+          type: string
+          description: Image of the campsite
+          example: "http://server.com/path/to/image.jpg"
+ 
+        location:
+          type: string
+          description: Location of the campsite
+          example: Mountain View
+
+        description:
+          type: string
+          description: Description of the campsite
+          example: Mountain View description
+ 
+        camptypes:
+          type: array
+          items:
+            type: string
+          description: Types of camps available
+          example: ["Tent", "RV", "Cabin"]
+         
+        prices:
+          type: array
+          items:
+            type: number
+          description: Prices for each camp type
+          example: [30.0, 50.0, 100.0]
+          
+        review:
+          type: string
+          description: Review of the campsite
+          example: Mountain View reviews
+
+        campDate:
+          type: string
+          format: date
+          description: Review of the campsite
+          example: 2023-12-12
+
+        campAvailability:
+          type: boolean
+          description: Availability of the campsite
+          example: true
+          
+ 
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code
+        message:
+          type: string
+          description: Error message
+
+      example: 
+        code: 404
+        message: Page not found

@@ -1,0 +1,26 @@
+@import 'variables';
+@import 'mixins';
+
+.contact-container{
+    margin-top: 10%;
+    min-height: 70vh;
+}
+
+.ac_btn{
+    color: white;
+}
+
+.contact-container a{
+    color: black;
+    text-decoration: none;
+}
+
+.ac_btn:hover{
+    color: white;
+}
+
+@media(max-width:426px){
+    .contact-container{
+        margin-top: 20%;
+    }
+}

@@ -1,0 +1,40 @@
+/* Custom background color for the navigation bar */
+@import 'variables';
+@import 'mixins';
+.custom-navbar-bg.navbar.navbar-expand-md.navbar-light.bg-light {
+  background-color: rgb(243, 244, 245) !important;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  top: 0;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  
+}
+
+.nav-link {
+  margin-left: 0px;
+  padding-left: 0px;
+  font-weight: 600 !important;
+}
+
+.nav-link:last-child {
+  margin-right: 10px;
+}
+
+/* Center the logo */
+.brand-container {
+  display: $flex-display;
+  align-items: $align-items-center;
+  padding-right: 0; 
+  
+}
+
+.brandlogo {
+  margin: 0 10px;
+  height: 25px;
+  width: auto;
+  padding-right: 0;
+}
+
+
+/* Add any additional custom styles as needed */

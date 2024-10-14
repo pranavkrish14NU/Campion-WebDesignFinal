@@ -1,0 +1,101 @@
+// Mixin for Flex Container
+
+@mixin flex-container($justify: center, $align: center, $direction: row) {
+    display: $flex-display;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+  }
+  
+  // Mixin for Border Radius
+  @mixin border-radius($radius: $border-radius) {
+    border-radius: $radius;
+  }
+  
+  // Mixin for Box Shadow
+  @mixin box-shadow($shadow: $box-shadow) {
+    box-shadow: $shadow;
+  }
+  
+  // Mixin for Button
+  @mixin button-style($bg-color, $text-color, $hover-color) {
+    background: $bg-color;
+    color: $text-color;
+    padding: 10px 15px;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    font-size: 1em;
+  
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+  
+  // mixins.scss
+
+@mixin flex-container($justify: center, $align: center, $direction: row) {
+  display: $flex-display;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+@mixin box-shadow($value) {
+  box-shadow: $value;
+}
+
+@mixin transition($property, $duration) {
+  transition: $property $duration ease-in-out;
+}
+
+@mixin transform-translate($x, $y) {
+  transform: translate($x, $y);
+}
+
+@mixin overflow-hidden {
+  overflow: hidden;
+}
+
+@mixin border($value) {
+  border: $value;
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin button-style($background, $color, $hover-background) {
+  background: $background;
+  color: $color;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+
+  &:hover {
+    background-color: $hover-background;
+  }
+}
+
+@mixin button-styles($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}

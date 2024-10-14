@@ -1,0 +1,467 @@
+@import 'variables';
+@import 'mixins';
+
+.campgrounds-container {
+  display: $flex-display;
+  justify-content:center;
+  align-items: $align-items-center;
+}
+ 
+.campground-container {
+  width: 60%;
+  margin-top: 80px;
+  padding: 0px 20px;
+  /* border-right: 0.75px solid grey; */
+}
+
+.campground-container p{
+  margin-bottom: 10px;
+}
+
+.campground-image {
+  border-radius: $border-radius-value;
+  margin-bottom: 10px;
+  width: 90%;
+  height: 400px;
+  object-fit: cover;
+}
+ 
+.campground-details {
+  font-size: 16px;
+  color: #333;
+  padding: 5px;
+  margin-bottom:10px;
+}
+
+.loading {
+  font-size: 18px;
+  font-weight: $font-weight-bold;
+  color: #777;
+  background-color: #ffffff;
+  padding: $padding-value;
+  border-radius: 4px;
+}
+ 
+.review-section {
+  padding: 20px;
+  border-radius: 8px;
+}
+ 
+.review-input {
+  display: $flex-display;
+  flex-direction: $flex-direction-column;
+}
+ 
+.review-section textarea {
+  margin-top: 10px;
+  padding: $padding-value;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+ 
+.review-section button {
+  margin-top: 10px;
+  padding: 8px; 
+  font-size: 14px; 
+  background-color: #4caf50;
+  width: 100px;
+  color: #fff; 
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: $font-weight-bold;
+}
+ 
+.review-section button:hover {
+  background-color: #007bff;
+}
+.review-heading {
+  font-size: 25px;
+  font-weight: $font-weight-bold;
+}
+.bold-text {
+  font-weight: $font-weight-bold;
+  margin-top: 40px;
+ 
+}
+.star-rating {
+  display: $flex-display;
+  margin-top: -15px;
+}
+ 
+.star-rating svg {
+  width: 20px; 
+  height: 20px; 
+  margin-right: 5px; 
+}
+ 
+.delete-button {
+  font-size: 14px;
+  padding:8px;
+  width: 100px;
+  border-radius: 5px;
+  color: white;
+  margin-top: 10px;
+  font-weight: $font-weight-bold;
+  margin-bottom: 20px;
+  background: 200px/200px url(https://assets.thedyrt.com/next/public/assets/images/NoiseOverlay_Dark@2x.png),
+    linear-gradient(180deg, #e74c3c, #c0392b 82.11%);
+  border: none;
+  color: white;
+}
+.edit-button{
+  font-size: 14px;
+  padding:8px;
+  width: 100px;
+  border-radius: 5px;
+  background: url('https://assets.thedyrt.com/next/public/assets/images/NoiseOverlay_Dark@2x.png') 0 0/200px 200px,
+              linear-gradient(180deg, #2d68a0, #14467d 82.11%);
+  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-right: 15px;
+  font-weight: $font-weight-bold;
+  border: none;
+  color: white;
+}
+
+.booking-button{
+  background: 200px/200px
+      url(https://assets.thedyrt.com/next/public/assets/images/NoiseOverlay_Dark@2x.png),
+    linear-gradient(180deg, #397c70, #1a4e3d 82.11%);
+  margin-bottom: 20px;
+  margin-top: 10px;
+  /* margin-left: 10px; */
+  font-weight: $font-weight-bold;
+  color: white;
+}
+
+.edit-button{
+  margin-left: 15px;
+  width: 100px;
+  border-radius: 5px;
+}
+
+.edit-button button:hover {
+  background-color: #007bff;
+
+}
+.delete-button button:hover {
+  cursor:pointer;
+}
+
+.Star-rating {
+  display: $flex-display;
+  justify-content: space-between;
+  width: 100%;
+  align-items: $align-items-center;
+}
+
+.average-rating{
+  display: $flex-display;
+  align-items: $align-items-center;
+  justify-content: flex-start;
+  margin-bottom:10px;
+  margin-top:0px;
+  margin-right: 100px;
+}
+
+.average-rating div{
+  margin:0px;
+  margin-left: 20px;
+  margin-bottom: 0.5rem;
+  padding: 0px;
+  height: auto;
+}
+ 
+.campground-details-container {
+  display: $flex-display;
+  flex-direction: $flex-direction-column;
+  align-items: flex-start; 
+  margin-top: 80px; 
+  width: 30%;
+  border-left: 0.75px solid grey;
+}
+
+@media (max-width:769px) {
+  .campground-container{
+    width: 55%;
+    
+  }
+
+  .campground-details-container{
+    width: 45%;
+  }
+} 
+
+@media (max-width:426px) {
+  .campgrounds-container{
+    flex-direction: $flex-direction-column;
+  }
+  .campground-container{
+    width: 100%;
+    
+  }
+
+  .campground-details-container{
+    width: 100%;
+  }
+} 
+
+
+.map-container {
+  margin-left: 20px;
+  width: 100%; 
+}
+
+.campgrounds-container {
+  display: $flex-display;
+  justify-content: center;
+  align-items: flex-start; 
+}
+
+.campground-container {
+  width: 60%;
+  margin-top: 80px;
+  padding: 0px 20px;
+}
+
+.campground-details-container {
+  display: $flex-display;
+  flex-direction: $flex-direction-column;
+  align-items: flex-start; 
+  margin-top: 80px;
+  width: 30%;
+}
+
+@media (max-width:1025px) {
+  .map-container{
+    width: 90%;
+  }
+}
+
+@media (max-width:769px) {
+  .campground-container{
+    width: 55%;
+    
+  }
+
+  .campground-details-container{
+    width: 45%;
+  }
+
+  .average-rating {
+    margin-right: 20px;
+
+  }
+} 
+
+@media (max-width:426px) {
+  .campgrounds-container{
+    flex-direction: $flex-direction-column;
+  }
+  .campground-container{
+    width: 100%;
+    
+  }
+
+  .campground-container img {
+    width: 97%
+  }
+
+  .campground-details-container{
+    width: 100%;
+  }
+  
+  .average-rating {
+    flex-direction: $flex-direction-column;
+    margin-right: 0px;
+    align-items: $align-items-center;
+    justify-content: center;
+  }
+
+  .average-rating div {
+    margin-left: 0px;
+  }
+} 
+
+.map-container {
+  margin-left: 20px;
+  border-radius: $border-radius-value; 
+}
+
+.map-container {
+  margin-left: 20px;
+  overflow: hidden; 
+}
+
+.map-container .mapboxgl-map {
+  border-radius: 5px; 
+}
+
+.success-modal_delete {
+  background-color: #4caf50; 
+  color: #fff; 
+  padding: 15px; 
+  border-radius: 5px; 
+  text-align: center; 
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+}
+
+.success-modal_delete h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.success-modal_delete button {
+  background-color: #fff; 
+  color: #4caf50; 
+  padding: 10px 15px; 
+  border: none;
+  border-radius: 5px; 
+  cursor: pointer; 
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+
+.error-modal_delete {
+  background-color: $error-color;
+  color: #fff; 
+  padding: 15px; 
+  border-radius: 5px; 
+  text-align: center; 
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+}
+
+.error-modal_delete p {
+  margin: 0;
+  font-size: 1em;
+}
+
+.error-modal_delete button {
+  background-color: #fff; 
+  color: #f44336; 
+  padding: 10px 15px;
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+.delete-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 800%;
+  text-align: center;
+  transition: opacity 0.5s ease-in-out;
+  border: 2px solid #bbc2be;
+}
+
+.delete-modal h2 {
+  color:red; 
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+
+.delete-modal button.delete-button {
+  background-color: #d9534f; /* Bootstrap's danger color */
+  color: #fff; /* White text on a red background */
+  border: none;
+  padding: 12px 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.delete-modal button.delete-button:hover {
+  background-color: #c9302c; 
+}
+
+.delete-modal button.cancel-button {
+  background-color: #45bee3; 
+  color: #fff; 
+  border: none;
+  padding: 10px 22px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: $font-weight-bold;
+}
+
+.delete-modal button.cancel-button:hover {
+  background-color: #46b8da;
+}
+
+.success-message-modal-delete {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 500%;
+  text-align: center;
+  transition: opacity 0.5s ease-in-out;
+  border: 2px solid #bbc2be;
+
+}
+.success-message-modal-delete h2 {
+  color: #2ecc71; 
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+.success-message-modal-delete p {
+ 
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+
+.success-message-modal-delete button {
+  background: 200px/200px
+  url(https://assets.thedyrt.com/next/public/assets/images/NoiseOverlay_Dark@2x.png),
+linear-gradient(180deg, #397c70, #1a4e3d 82.11%);  color: white;
+  padding: 10px 25px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  font-size: 18px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.success-message-modal-delete button:hover {
+  background-color: #e4e5e9; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,54 @@
+{
+    "navbar.home.label":"Home",
+    "navbar.campground.label":"Campgrounds",
+    "navbar.newCampground.label":"Register Campsite",
+    "navbar.signup.label":"Sign Up",
+    "navbar.login.label":"Login",
+    "navbar.logout.label":"Logout",
+    "campground.price.label":"Price",
+
+    "home.label.campingstarts":"Camping Starts Here",
+    "home.label.bookcamp":"Book campgrounds for tents, RVs, cabins, and glamping, or find free camping",
+    "home.label.unlock":"Unlock new access to unexpected places",
+    "home.label.easily book":"Easily book secluded outdoor tent sites, RV sites, and glamping stays on private lands -- from blueberry farms to lake-side yurts",
+    "home.label.discover":"Discover unique outdoor experiences.",
+    "home.label.relax":"Relax in an outdoor sauna, explore hidden swimming holes, do yoga with the goats, and eat wood-fired pizza under the stars.",
+
+    "home.label.protect":"Protect our wild places.",
+    "home.label.bybooking":"By Booking with us, you're funding the protection of open spaces and supporting the people who support the land.",
+    "home.label.ownormanage":"Own or Manage a Campground?",
+    "home.label.listyour":"List your campground for free. Get access to the largest community of campers. Create or claim your listing in minutes",
+    "home.label.claim":"Claim a Campground",
+
+
+    "campgrounds.sortby": "Sort by",
+    "campgrounds.pricelth": "Price - Low to High",
+    "campgrounds.pricehtl": "Price - High to Low",
+    "campgrounds.locations": "Location:",
+    "campgrounds.per-night": "/Night",
+    "campgrounds.alllocations": "All Locations",
+    "campgrounds.search-placeholder": "Search",
+
+    "campgrounds.detailed.rating": "Rating :",
+    
+
+    "edit.button": "Edit",
+    "delete.button": "Delete",
+    "book.button": "Book Now",
+
+
+    "confirm.deletion": "Confirm Deletion",
+    "confirm.deletion.message": "Are you sure you want to delete this campground?",
+    "confirm.deletion.success": "Success!",
+    "confirm.deletion1.message": "Campground successfully deleted",
+
+    "delete.yes": "Yes, Delete",
+    "delete.cancel": "Cancel"
+
+
+    
+
+
+
+
+}

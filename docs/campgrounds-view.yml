@@ -1,0 +1,115 @@
+openapi: 3.0.0
+info:
+  title: Campground API
+  description: Rest API for managing campgrounds
+  version: 'v1.0'
+servers:
+  - url: http://localhost:8080
+paths:
+  /campgrounds:
+    get:
+      operationId: get-campgrounds
+      description: Get a list of campgrounds based on specified parameters
+      responses:
+        "200":
+          description: Successful response with a list of campgrounds
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Campground'
+        "400":
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "404":
+          description: Campgrounds not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                code: "404"
+                message: "Campgrounds not found"
+      parameters:
+        - name: name
+          in: query
+          description: campground name
+          schema:
+            type: string
+          example: "Awesome Campsite"
+        - name: price
+          in: query
+          description: campground price
+          schema:
+            type: number
+          example: 50.0
+        - name: review
+          in: query
+          description: campground review
+          schema:
+            type: number
+          example: 4.5
+        - name: rating
+          in: query
+          description: campground rating
+          schema:
+            type: number
+          example: 5
+        - name: location
+          in: query
+          description: campground location
+          schema:
+            type: string
+          example: "Mountain View"
+        - name: picture
+          in: query
+          description: campground picture URL
+          schema:
+            type: string
+          example: "https://example.com/campground-picture.jpg"
+components:
+  schemas:
+    Campground:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Campground name
+        price:
+          type: number
+          description: Campground price
+        review:
+          type: number
+          description: Campground review
+        rating:
+          type: number
+          description: Campground rating
+        location:
+          type: string
+          description: Campground location
+        picture:
+          type: string
+          format: uri
+          description: URL of the campground picture
+      example:
+        name: Awesome Campsite
+        price: 50.0
+        review: 4.5
+        rating: 5
+        location: "Mountain View"
+        picture: "https://example.com/campground-picture.jpg"
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code
+        message:
+          type: string
+          description: Error message
+      example:
+        code: "400"
+        message: "Bad Request"

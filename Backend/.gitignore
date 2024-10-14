@@ -1,0 +1,31 @@
+# Ignore npm package directory
+node_modules/
+
+# Ignore npm lock files
+yarn.lock
+
+# Optional: Ignore npm debug log and all logs
+npm-debug.log
+#added assignment-4
+*.log 
+
+
+# Optional: Ignore .npm directory
+.npm
+
+#for mac computers
+#added assignment-4
+.DS_Store
+
+#ignore the dist foder
+dist/
+
+/package-lock.json
+
+.EN
+
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

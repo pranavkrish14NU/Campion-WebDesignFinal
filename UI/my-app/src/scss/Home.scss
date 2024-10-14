@@ -1,0 +1,214 @@
+@import 'variables';
+@import 'mixins';
+body{
+  /* background-color: rgb(227, 214, 214) */
+  /* background-color: #dfdedf */
+  background-color: rgb(255,255,255);
+}
+
+.hero_container {
+  display: $flex-display;
+  flex-direction: $flex-direction-column;
+  margin-top: 30px;
+}
+
+.wavebg {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background: 200px/200px
+      url(https://assets.thedyrt.com/next/public/assets/images/NoiseOverlay_Dark@2x.png),
+    linear-gradient(180deg, #397c70, #1a4e3d 82.11%);
+  display: $flex-display;
+  justify-content: space-around;
+  align-items: $align-items-center;
+  background-attachment: fixed;
+}
+
+.herotext {
+  width: 40%;
+  color: white;
+}
+
+.herotext p{
+    width: 80%;
+}
+
+.heroimg {
+  width: 40%;
+  height: auto;
+}
+
+.heroimg img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.wave_clip {
+  clip-path: polygon(0 0,0% -0%,1% 0.69%,2% 2.67%,3% 5.77%,4% 9.67%,5% 14%,6% 18.33%,7% 22.23%,8% 25.33%,9% 27.31%,10% 28%,11% 27.31%,12% 25.33%,13% 22.23%,14% 18.33%,15% 14%,16% 9.67%,17% 5.77%,18% 2.67%,19% 0.69%,20% -0%,21% 0.69%,22% 2.67%,23% 5.77%,24% 9.67%,25% 14%,26% 18.33%,27% 22.23%,28% 25.33%,29% 27.31%,30% 28%,31% 27.31%,32% 25.33%,33% 22.23%,34% 18.33%,35% 14%,36% 9.67%,37% 5.77%,38% 2.67%,39% 0.69%,40% -0%,41% 0.69%,42% 2.67%,43% 5.77%,44% 9.67%,45% 14%,46% 18.33%,47% 22.23%,48% 25.33%,49% 27.31%,50% 28%,51% 27.31%,52% 25.33%,53% 22.23%,54% 18.33%,55% 14%,56% 9.67%,57% 5.77%,58% 2.67%,59% 0.69%,60% -0%,61% 0.69%,62% 2.67%,63% 5.77%,64% 9.67%,65% 14%,66% 18.33%,67% 22.23%,68% 25.33%,69% 27.31%,70% 28%,71% 27.31%,72% 25.33%,73% 22.23%,74% 18.33%,75% 14%,76% 9.67%,77% 5.77%,78% 2.67%,79% 0.69%,80% -0%,81% 0.69%,82% 2.67%,83% 5.77%,84% 9.67%,85% 14%,86% 18.33%,87% 22.23%,88% 25.33%,89% 27.31%,90% 28%,91% 27.31%,92% 25.33%,93% 22.23%,94% 18.33%,95% 14%,96% 9.67%,97% 5.77%,98% 2.67%,99% 0.69%,100% -0%,100% 100%,0% 100%);
+  display: unset;
+  width: 100%;
+  height: 80px;
+  /* background-color: #dfdedf; */
+  background-color: rgb(255,255,255);
+  top: 495px;
+  position: absolute;
+}
+
+.home_page_2 {
+  margin-top: 40px;
+  /* height: 90vh; */
+  height: auto;
+  display: $flex-display;
+  flex-direction: $flex-direction-column;
+  justify-content: center;
+  align-items: $align-items-center;
+}
+
+.section2_header{
+  width: 100%;
+  display: $flex-display;
+  justify-content: center;
+  align-items: $align-items-center;
+}
+
+.home_page_2 div h2{
+    text-wrap: wrap;
+    width: 520px;
+    margin: 0px 20px;
+}
+
+.home_keyword{
+    color: #397c70;
+    font-style: italic;
+}
+
+.info_cards_container {
+    margin: 20px 0px;
+    display: $flex-display;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.info_card {
+  width: 300px;
+  /* width: calc(100vw / 4); */
+  margin: 15px;
+}
+
+.info_card_body{
+    margin-top: 20px;
+}
+
+.blob_container{
+    width: 300px;
+    height: 300px;
+}
+
+.info_card img{
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.info_card:nth-child(1) img {
+    border-radius: 70% 43% 60% 70% / 60% 40% 60% 40%;
+}
+
+.info_card:nth-child(2) img {
+    /* border-radius: 30% 96% 54% 84% / 80% 82% 69% 83%; */
+    border-radius: 88% 59% 42% 100% / 100% 100% 38% 47%;
+}
+
+.info_card:nth-child(3) img {
+    border-radius: 79% 60% 52% 86% / 100% 75% 57% 30%;
+}
+
+.section3{
+    width: 100%;
+    height: 50vh;
+    padding: 20px 0;
+    display: $flex-display;
+    justify-content: center;
+    align-items: $align-items-center;
+    background: 200px/200px
+      url(https://assets.thedyrt.com/next/public/assets/images/NoiseOverlay_Dark@2x.png),
+    linear-gradient(180deg, #397c70, #1a4e3d 82.11%);
+    background-attachment: fixed;
+    color: #ffffff;
+    flex-wrap: wrap-reverse;
+}
+
+
+.section3_text{
+    width: 50%;
+}
+
+.section3_text p{
+    width: 70%;
+}
+
+.section3_text a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.section3_img img{
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+
+
+@media(max-width:1125px) {
+  .wave_clip{
+    top: 460px;
+  }
+  .blob_container{
+    width: 250px;
+    height: 250px;
+  }
+  .info_card{
+    width: 250px;
+  }
+}
+
+@media(max-width:840px) {
+  .blob_container{
+    width: 200px;
+    height: 200px;
+  }
+  .info_card{
+    width: 200px;
+  }
+  .section3{
+    height: auto;
+  }
+}
+
+@media(max-width:500px){
+  .wavebg{
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: $align-items-center;
+  }
+  .heroimg{
+    width: 80%;
+    text-align: center;
+  }
+  .herotext{
+    width: 80%;
+    text-align: center;
+  }
+  .herotext p{
+    width: 100%;
+  }
+  .section3_text{
+    width: 70%
+  }
+}

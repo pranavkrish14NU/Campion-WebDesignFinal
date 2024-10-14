@@ -1,0 +1,260 @@
+@import 'variables';
+@import 'mixins';
+
+.stripe-checkout-container {
+  background-color: white;
+  color: black;
+  border: 1px solid #ced4da;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.error-message {
+  font-weight: $font-weight-bold;
+  color: #ff0000;
+  white-space: nowrap;
+  margin-top: -12px;
+}
+
+.availability-message {
+  color: #ff0000;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-left: 35px;
+  font-weight: $font-weight-bold;
+}
+.input_date {
+  display: $flex-display;
+  flex-direction: $flex-direction-column;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.input_date_column {
+  margin-bottom: 15px;
+  padding: 2px 2px;
+}
+
+.input_date_row {
+  gap: 100px;
+  border-radius: 10px;
+  font-weight: $font-weight-bold;
+}
+.input_date_column input {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+}
+.input_date input {
+  width: 270px;
+}
+.input_date_button {
+  background-color: #608ebf;
+  color: #fff;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 25%;
+  margin-top: 20px;
+  margin-left: 0;
+}
+.totalprice {
+  font-size: medium;
+  font-weight: $font-weight-bold;
+}
+.input_date_button:hover {
+  background-color: #0056b3;
+
+  transform: scale(1.1);
+}
+
+.bookingbtn:hover {
+  background-color: rgb(60, 101, 91);
+}
+
+.input_date label {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.campground-reviews {
+  margin-top: 20px;
+}
+
+.review-item {
+  padding-left: 10px;
+}
+
+.booking-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  border: 2px solid #bbc2be;
+}
+
+.booking-success-content {
+  color: #333;
+}
+
+.booking-success-content h2 {
+  color: #27ae60;
+  font-size: 28px;
+}
+
+.booking-success-content p {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+.booking-success-content strong {
+  font-weight: $font-weight-bold;
+}
+
+.booking-success-content button {
+  /* background-color: #3498db; */
+  
+
+background: 200px/200px
+url(https://assets.thedyrt.com/next/public/assets/images/NoiseOverlay_Dark@2x.png),
+linear-gradient(180deg,#1f83c6, #1f83c6 82.11%);
+
+
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  font-weight: $font-weight-bold;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 30px;
+  font-size: 20px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.booking-success-content button:hover {
+  background-color: #2980b9;
+  transform: scale(1.1);
+}
+
+.pay_button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 25%;
+  margin-top: 20px;
+}
+.input_date_row input:focus {
+  outline: 2px solid #7e5959;
+  outline-offset: 2px;
+}
+
+.campground-image-container {
+  flex: 0 0 40%;
+  margin-right: 20px;
+}
+
+.booking-page {
+  display: $flex-display;
+  flex-direction: $flex-direction-column;
+  align-items: $align-items-center;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.content-wrapper {
+  display: $flex-display;
+  justify-content: space-between;
+  width: 70%;
+
+  justify-content: flex-end;
+
+  -moz-osx-font-smoothing: grayscale;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  padding: 22px;
+  margin-bottom: 25px;
+  margin-top: 20px;
+}
+
+.left-content {
+  flex: 1;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.right-content {
+  flex: 1;
+  margin-left: 20px;
+  margin-top: 0px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.campground-image_booking {
+  border-radius: 4px;
+  margin-bottom: 10px;
+  width: 480px;
+  height: 350px;
+}
+
+.left-content p {
+  font-weight: $font-weight-bold;
+}
+.campname {
+  font-size: 30px;
+  font-weight: $font-weight-bold;
+}
+.campdetails-book-price {
+  font-size: 20px;
+}
+
+.campdetails-book-location {
+  font-size: 20px;
+}
+.campdetails-book-type {
+  font-size: 20px;
+}
+
+.bookingbtn {
+  margin-left: 10px;
+  margin-top: 30px;
+  background: 200px/200px
+      url(https://assets.thedyrt.com/next/public/assets/images/NoiseOverlay_Dark@2x.png),
+    linear-gradient(180deg, #397c70, #1a4e3d 82.11%);
+  padding: 15px 10px;
+  font-weight: $font-weight-bold;
+  border: 1px solid #a3a0a0;
+  border-radius: 10px;
+  color: white;
+}

@@ -1,0 +1,70 @@
+@import 'variables';
+@import 'mixins';
+footer{
+    display: $flex-display;
+    justify-content: space-around;
+    align-items: $align-items-center;
+    padding: 20px 20px;
+    /* background-color: rgb(207, 191, 191) */
+    /* background-color: black;
+    border-top: 1px solid gray; */
+    /* background-color: rgb(207, 191, 191) */
+    background: 200px/200px
+      url(https://assets.thedyrt.com/next/public/assets/images/NoiseOverlay_Dark@2x.png),
+    linear-gradient(180deg, #397c70, #1a4e3d 82.11%);
+    background-attachment: fixed;
+    color: white;
+}
+
+.footer-left{
+    padding-right: 10px;
+}
+
+.footer-right{
+    margin-top: 10px;
+    display: $flex-display;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 40%;
+}
+
+.footer-right h6{
+    text-decoration: underline;
+}
+
+.footer-col1,.footer-col2{
+    display: $flex-display;
+    flex-direction: $flex-direction-column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer-right a{
+    text-decoration: none;
+    /* color: rgb(63, 63, 63); */
+    color: rgb(246, 241, 241);
+}
+
+.footer-right a:hover{
+    text-decoration: underline;
+    color: black;
+}
+
+.footer-brandlogo{
+    margin:0 10px 10px 0px;
+    height: 25px;
+    width: auto;
+}
+
+@media(max-width:500px){
+    footer{
+        flex-direction: column-reverse;
+    }
+    .footer-left{
+        margin-top: 20px;
+        width: 80%;
+    }
+    .footer-right{
+        width: 90%;
+    }
+}

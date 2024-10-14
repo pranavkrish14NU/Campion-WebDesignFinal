@@ -1,0 +1,55 @@
+// Display
+$flex-display: flex;
+$flex-direction-column: column;
+
+
+//Alignment
+$align-items-center: center;
+
+//Margin
+$margin-top-value: 50px;
+
+// Fonts
+$font-weight-bold: bold;
+$body-font: 'Arial', sans-serif;
+
+// Spacing
+$base-spacing: 20px;
+
+//Padding
+$padding-value: 10px;
+
+// Borders
+$border-radius-value: 20px;
+$border-radius: 8px;
+$border-width: 2px;
+$border-color: #ccc;
+
+// Breakpoints
+$breakpoint-sm: 426px;
+$breakpoint-md: 769px;
+$breakpoint-lg: 1025px;
+
+// Colors
+$primary-color: #007bff;
+$success-color: #4caf50;
+$error-color: #f44336;
+$warning-color: #ffc107;
+
+// Images
+$overlay-image: 'https://assets.thedyrt.com/next/public/assets/images/NoiseOverlay_Dark@2x.png';
+
+// Responsive Margins
+$responsive-margin-lg: 100px;
+
+// Box Shadows
+$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+// Transitions
+$transition-speed: 0.5s;
+
+// variables.scss
+
+$border-color: #c5c1c1;
+$box-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.2);
+$background-color: whitesmoke;

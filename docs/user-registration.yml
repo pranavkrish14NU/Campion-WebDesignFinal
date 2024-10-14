@@ -1,0 +1,105 @@
+openapi: 3.0.0
+info:
+  title: Registration API
+  description: Rest API for user registration
+  version: 'v1.0'
+servers:
+  - url: http://localhost:8080
+paths:
+  /register:
+    post:
+      operationId: user-register
+      description: User registration
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/User"
+      responses:
+        "201":
+          description: Successful registration
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RegistrationResponse"
+              examples:
+                successfulRegistration:
+                  value:
+                    message: "Registration successful"
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+              examples:
+                invalidRequest:
+                  value:
+                    code: "400"
+                    message: "Invalid request. Please check the provided data."
+        "404":
+          description: User not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                code: "404"
+                message: "Bad Request"
+      parameters:
+        - name: username
+          in: query
+          description: User's username
+          required: true
+          schema:
+            type: string
+          example: "jack"
+        - name: email
+          in: query
+          description: User's email
+          required: true
+          schema:
+            type: string
+            format: email
+          example: "jack@example.com"
+        - name: password
+          in: query
+          description: User's password
+          required: true
+          schema:
+            type: string
+          example: "Jack123"
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        username:
+          type: string
+          description: User's username
+        email:
+          type: string
+          format: email
+          description: User's email
+        password:
+          type: string
+          description: User's password
+    RegistrationResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          description: Registration message
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code
+        message:
+          type: string
+          description: Error message
+      example:
+        code: RegistrationError
+        message: Email already registered

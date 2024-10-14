@@ -1,0 +1,121 @@
+openapi: 3.0.0
+info:
+  title: Campground API
+  description: Rest API for food and beverages
+  version: 'v1.0'
+servers:
+  - url: http://localhost:8080
+paths:
+  /foodandbeverages:
+    post:
+      operationId: Food_and_beverages_campground
+      description: Display form for selecting Food & beverages
+      responses:
+        "200":
+          description: Successful response for Food & beverages availability
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FoodAndBeveragesResponse'
+              example:
+                message: "Operation successful. Food and beverages selected."
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                code: 400
+                message: Bad request
+      parameters:
+        - name: campDate
+          in: query
+          description: Date for campsite availability
+          required: true
+          schema:
+            type: string
+            format: date
+            pattern: '^\d{4}-\d{2}-\d{2}$'
+        - name: foodOptions
+          in: query
+          description: Food options available
+          required: true
+          schema:
+            type: array
+            items:
+              type: string
+          example: ["Breakfast", "Lunch", "Dinner"]
+        - name: beverageOptions
+          in: query
+          description: Beverage options available
+          required: true
+          schema:
+            type: array
+            items:
+              type: string
+          example: ["Water", "Soda"]
+
+        - name: beverageOptionsWithWaterQuantity
+          in: query
+          description: Beverage options
+          required: true
+          schema:
+            type: integer
+          example: 2
+        
+        - name: beverageOptionsWithSodaQuantity
+          in: query
+          description: Beverage options
+          required: true
+          schema:
+            type: integer
+          example: 3
+
+
+components:
+  schemas:
+    foodandbeverages:
+      type: object
+      properties:
+        campDate:
+          type: string
+          format: date
+          description: Date for campsite availability
+          example: 2023-12-12
+        foodOptions:
+          type: array
+          items:
+            type: string
+          description: Types of Food options available
+          example: ["Breakfast", "Lunch", "Dinner"]
+        beverageOptions:
+          type: array
+          items:
+            type: string
+          description: Types of beverage options available
+          example: ["Water", "Soda"]
+        beverageOptionsWithWaterQuantity:
+          type: number
+          description: Quantity of water ordered
+          example: 3
+
+        beverageOptionsWithSodaQuantity:
+          type: number
+          description: Quantity of soda ordered
+          example: 1
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code
+        message:
+          type: string
+          description: Error message
+    FoodAndBeveragesResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          description: Success of the operation

@@ -1,0 +1,165 @@
+openapi: 3.0.0
+info:
+  title: Campground API
+  description: Rest API for managing campgrounds
+  version: 'v1.0'
+servers:
+  - url: http://localhost:8080
+paths:
+  /campgrounds/create:
+    post:
+      operationId: create-campground
+      description: Display form for creating a new campground
+      responses:
+        "200":
+          description: response for the creation form
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Campground'
+        "400":
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "404":
+          description: Campgrounds not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      parameters:
+        - name: campsiteName
+          in: query
+          description: Name of the campsite
+          required: true
+          schema:
+            type: string
+          example: "Awesome Campsite"
+        - name: campsiteLocation
+          in: query
+          description: Location of the campsite
+          required: true
+          schema:
+            type: string
+          example: "Mountain View"
+        - name: campTypes
+          in: query
+          description: Types of camps available
+          required: true
+          schema:
+            type: array
+            items:
+              type: string
+          example: ["Tent", "RV", "Cabin"]
+        - name: campPrices
+          in: query
+          description: Prices for each camp type
+          required: true
+          schema:
+            type: array
+            items:
+              type: number
+          example: [30.0, 50.0, 100.0]
+        - name: foodOptions
+          in: query
+          description: Food options available
+          required: true
+          schema:
+            type: array
+            items:
+              type: string
+          example: ["Breakfast", "Lunch", "Dinner"]
+        - name: foodPrices
+          in: query
+          description: Prices for each food option
+          required: true
+          schema:
+            type: array
+            items:
+              type: number
+          example: [10.0, 15.0, 20.0]
+        - name: beverageOptions
+          in: query
+          description: Beverage options available
+          required: true
+          schema:
+            type: array
+            items:
+              type: string
+          example: ["Water", "Soda"]
+        - name: beveragePrices
+          in: query
+          description: Prices for each beverage option
+          required: true
+          schema:
+            type: array
+            items:
+              type: number
+          example: [2.0, 3.0]
+components:
+  schemas:
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code
+          example: ValidationError
+        message:
+          type: string
+          description: Error message
+          example: Invalid input data
+    Campground:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Campground ID
+          example: abc123
+        name:
+          type: string
+          description: Name of the campsite
+          example: Awesome Campsite
+        location:
+          type: string
+          description: Location of the campsite
+          example: Mountain View
+        types:
+          type: array
+          items:
+            type: string
+          description: Types of camps available
+          example: ["Tent", "RV", "Cabin"]
+        prices:
+          type: array
+          items:
+            type: number
+          description: Prices for each camp type
+          example: [30.0, 50.0, 100.0]
+        foodOptions:
+          type: array
+          items:
+            type: string
+          description: Food options available
+          example: ["Breakfast", "Lunch", "Dinner"]
+        foodPrices:
+          type: array
+          items:
+            type: number
+          description: Prices for each food option
+          example: [10.0, 15.0, 20.0]
+        beverageOptions:
+          type: array
+          items:
+            type: string
+          description: Beverage options available
+          example: ["Water", "Soda"]
+        beveragePrices:
+          type: array
+          items:
+            type: number
+          description: Prices for each beverage option
+          example: [2.0, 3.0]

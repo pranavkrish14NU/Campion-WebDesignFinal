@@ -1,0 +1,459 @@
+
+@import 'variables';
+@import 'mixins';
+.admin-container {
+  margin-top: $margin-top-value;
+  display: $flex-display;
+  flex-direction: $flex-direction-column;
+  justify-content: space-around;
+  align-items: $align-items-center;
+  padding-top: 40px;
+  padding-left:20px;
+  padding-right:20px;
+}
+.admin-header{
+  width: 95%;
+  padding: 0 20px;
+}
+.admin-header p{
+  margin-left: 5px;
+}
+.admin-header h3{
+  display:$flex-display;
+  align-items: $align-items-center;
+}
+.admin-header h3 > span{
+  margin-left: 5px;
+}
+.header-span{
+  font-weight: 600;
+}
+.admin-top-container{
+  background-color: rgb(229, 224, 224);
+  padding: $padding-value;
+  width: 95%;
+  border-radius: $border-radius-value;
+}
+.admin-title {
+  color: #0c0808; 
+  display: $flex-display;
+  align-items: $align-items-center;
+  justify-content: space-between;
+  text-align: center;
+  margin: 10px 20px;
+}
+.admin-title div{
+  display: $flex-display;
+  align-items: $align-items-center;
+}
+.admin-title div > svg{
+  margin-right: 10px;
+}
+
+.filter-icon {
+  background: 200px/200px
+  url(https://assets.thedyrt.com/next/public/assets/images/NoiseOverlay_Dark@2x.png),
+linear-gradient(180deg, #397c70, #1a4e3d 82.11%); 
+  color: #fff;
+  border: none;
+  padding: 4px 10px; 
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-bottom: 12px;
+  /* height: 30px; */
+}
+
+.filter-icon:hover {
+  background-color: #2e7d32; 
+}
+
+.filter-modal {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.filter-modal label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.filter-modal input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.filter-modal button {
+  background-color: green;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter-modal button:hover {
+  background-color: #2e86c1;
+}
+
+.admin-delete-button {
+  background: 200px/200px url(https://assets.thedyrt.com/next/public/assets/images/NoiseOverlay_Dark@2x.png),
+    linear-gradient(180deg, #e74c3c, #c0392b 82.11%);
+  padding: 4px 13px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.admin-edit-button {
+  background: 200px/200px url(https://assets.thedyrt.com/next/public/assets/images/NoiseOverlay_Dark@2x.png),
+    linear-gradient(180deg, #3498db, #2980b9 82.11%);
+  padding: 4px 13px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.search-box {
+  /* margin-bottom: 20px; */
+  width: 90%;
+  display: $flex-display;
+  justify-content: flex-end;
+  align-items: $align-items-center;
+}
+
+.search-box div {
+  width: 50%;
+  display: $flex-display;
+  justify-content: flex-end;
+  align-items: $align-items-center;
+}
+
+.search-box input {
+  height: 30px;
+  width: 50%;
+}
+
+.export-button {
+  background: 200px/200px
+      url(https://assets.thedyrt.com/next/public/assets/images/NoiseOverlay_Dark@2x.png),
+    linear-gradient(180deg, #397c70, #1a4e3d 82.11%);
+  color: #fff;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.export-button:hover {
+  background-color: #219d54;
+}
+.table-container{
+  /* width: 80%; */
+  display: $flex-display;
+  justify-content: center;
+  flex-direction: $flex-direction-column;
+  align-items: $align-items-center;
+  margin-top: 30px;
+}
+.admin-table-container{
+  overflow-x: auto;
+  width: 90%;
+}
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  /* margin-top: 20px; */
+  /* border: 1.5px solid grey;  */
+}
+
+.admin-table th,
+.admin-table td {
+  border: 0.5px solid rgb(118, 116, 116);
+  padding: 12px;
+  text-align: center;
+}
+
+.admin-table th {
+  /* background-color: rgb(179, 167, 167); */
+  background-color: #405467;
+  cursor: pointer;
+  color: #fff;
+}
+.admin-row:hover{
+  background-color: #dfdedf !important;
+}
+.admin-table tr:nth-child(odd) {
+  /* background-color: #b4d6e6; */
+  background-color: #f9f9f9;
+}
+/* 
+.admin-table tr:nth-child(even) {
+  background-color: #b4d6e6
+} */
+.pageination-container{
+  width: 90%;
+}
+.pagination {
+  width: 100%;
+  display: $flex-display;
+  justify-content: center;
+  align-items: $align-items-center;
+  margin-top: 20px;
+  /* background: transparent !important; */
+}
+
+.page-link {
+  background: transparent !important;
+  color: black;
+}
+.page-link:focus{
+  box-shadow: none;
+}
+
+.page-item.active {
+  background: rgb(87, 140, 173);
+  box-shadow: none !important;
+
+}
+
+.admin-link {
+  text-decoration: none;
+  color: #3498db;
+  font-weight: $font-weight-bold;
+}
+
+.admin-link:hover {
+  text-decoration: underline;
+}
+
+.admin-row:hover {
+  background-color: #f5f5f5;
+}
+
+/* Add box border around the graphs */
+/* .admin-graph {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 20px;
+  padding: 20px;
+} */
+
+.small-search-box {
+  width: 100%;
+}
+
+.graph-container {
+  display: $flex-display;
+  margin: 30px 0;
+  padding: 20px;
+  flex-direction: $flex-direction-column;
+  /* flex-wrap: wrap; */
+  align-items: flex-start;
+  justify-content: space-around;
+  background-color: #d2cece;
+  border-radius: $border-radius-value;
+  width: 95%;
+}
+.graph-header{
+    width: 95%;
+    padding: 10px 20px;
+}
+.graph-header h4 > span{
+  margin-right: 10px;
+}
+.graphs{
+  display: $flex-display;
+  width: 100%;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.graph-left{
+  display: $flex-display;
+  flex-direction: $flex-direction-column;
+  justify-content: space-around;
+  /* height: 600px; */
+  width: 30%;
+}
+.graph-right{
+  width: 65%;
+  height: 90%;
+}
+.graph {
+  border: 1px solid grey;
+  margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: $border-radius-value;
+  padding: 20px;
+  display: $flex-display;
+  flex-direction: $flex-direction-column;
+  justify-content: center;
+  align-items: $align-items-center;
+  background-color: white;
+}
+.graph div{
+  width: inherit !important;
+  height: inherit !important;
+}
+
+.delete-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 800%;
+  text-align: center;
+  transition: opacity 0.5s ease-in-out;
+  border: 2px solid #bbc2be;
+}
+
+.delete-modal h2 {
+  color: red;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.delete-modal button.delete-button {
+  background-color: #d9534f; /* Bootstrap's danger color */
+  color: #fff; /* White text on a red background */
+  border: none;
+  padding: 12px 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.delete-modal button.delete-button:hover {
+  background-color: #c9302c;
+}
+
+.delete-modal button.cancel-button {
+  background-color: #45bee3;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.delete-modal button.cancel-button:hover {
+  background-color: #46b8da;
+}
+
+.success-message-modal-delete {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 500%;
+  text-align: center;
+  transition: opacity 0.5s ease-in-out;
+  border: 2px solid #bbc2be;
+}
+
+.success-message-modal-delete h2 {
+  color: #2ecc71;
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+
+.success-message-modal-delete p {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.success-message-modal-delete button {
+  background: 200px/200px url(https://assets.thedyrt.com/next/public/assets/images/NoiseOverlay_Dark@2x.png), linear-gradient(180deg, #397c70, #1a4e3d 82.11%);
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  font-size: 18px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.success-message-modal-delete button:hover {
+  background-color: #e4e5e9;
+}
+
+
+/* Responsive Styles */
+@media screen and (max-width: 769px) {
+  .admin-table th,
+  .admin-table td {
+      font-size: 14px;
+  }
+  .search-box div{
+    width: 70%;
+  }
+  .graphs{
+    flex-direction: $flex-direction-column;
+  }
+  .graph{
+    padding: 5px;
+  }
+  .graph-left{
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .graph:nth-child(1){
+    margin-right: 10px;
+  }
+  .graph-right{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .admin-table th,
+  .admin-table td {
+      font-size: 12px;
+  }
+  .search-box div{
+    width: 100%;
+  }
+  .search-box div input{
+    width: 100%;
+  }
+  .small-search-box {
+      width: 100%;
+  }
+  .export-button{
+    padding: 5px;
+    font-size: 14px;
+  }
+  .admin-title div{
+    font-size: 1.2rem;
+  }
+}
+
+
+

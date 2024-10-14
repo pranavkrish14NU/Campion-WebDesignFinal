@@ -1,0 +1,84 @@
+openapi: 3.0.0
+info:
+  title: Booking Campground API
+  description: Rest API for Booking Campground 
+  version: 'v1.0'
+servers:
+  - url: http://localhost:8080
+paths:
+  /booking:
+    post:
+      operationId: create-booking
+      description: Create a new booking
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/booking'  # Corrected reference to 'booking'
+      responses:
+        "201":
+          description: Booking created successfully  # Updated description
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/booking'  # Corrected reference to 'booking'
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                code: 400
+                message: Bad request
+components:
+  schemas:
+    booking:  # Corrected schema name to 'booking'
+      type: object
+      properties:
+        name:
+          type: string
+          description: Name of the campsite
+          example: Awesome campsite
+        image:
+          type: string
+          description: Image of the campsite
+          example: "http://server.com/path/to/image.jpg"
+        location:
+          type: string
+          description: Location of the campsite
+          example: Mountain View
+        description:
+          type: string
+          description: Description of the campsite
+          example: Mountain View description
+        campTypes:
+          type: string
+          description: Types Of Camp Available
+          example: Tent
+        prices:
+          type: number
+          description: Prices for each camp type
+          example: 30.0
+        review:
+          type: string
+          description: Review of the campsite
+          example: Mountain View reviews
+        campDate:
+          type: string
+          format: date
+          description: Review of the campsite
+          example: 2023-12-12
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code
+        message:
+          type: string
+          description: Error message
+      example:
+        code: 404
+        message: Page not found

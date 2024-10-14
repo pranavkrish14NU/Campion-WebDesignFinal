@@ -1,0 +1,50 @@
+# Ignore npm package directory
+node_modules/
+
+# Ignore npm lock files
+yarn.lock
+
+# Optional: Ignore npm debug log and all logs
+npm-debug.log
+#added assignment-4
+*.log 
+
+
+# Optional: Ignore .npm directory
+.npm
+
+#for mac computers
+#added assignment-4
+.DS_Store
+
+#ignore the dist foder
+dist/
+
+/package-lock.json
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+/package-lock.json

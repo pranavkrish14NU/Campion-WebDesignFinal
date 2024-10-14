@@ -1,0 +1,76 @@
+@import 'variables';
+@import 'mixins';
+.error-text {
+    color: red;
+    font-style: bold;
+  }
+
+  .error-text1 {
+    color: green;
+    font-style: bold;
+  }
+  
+  .loginpage{
+    height: 90vh;
+    width: 100%;
+    display: $flex-display;
+    justify-content: space-around;
+    align-items: $align-items-center;
+  }
+  .loginimg{
+    width: 40%;
+  }
+  .login_container{
+    width: 40%;
+    padding: 20px;
+  }
+  .login_container h2{
+    margin-bottom: 10px;
+  }
+  .login_container label{
+    margin: 5px;
+  }
+  .login_container input{
+    width: 70%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid black;
+    border-radius: 0px;
+    margin-left: 5px;
+  }
+  .login_container input:focus{
+    background-color: transparent;
+    box-shadow: none;
+    border-color: black;
+  }
+  .login_container p{
+    font-size: small;
+  }
+  .login_container a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+  }
+  .btn{
+    background: 200px/200px
+      url(https://assets.thedyrt.com/next/public/assets/images/NoiseOverlay_Dark@2x.png),
+    linear-gradient(180deg, #397c70, #1a4e3d 82.11%);
+    border: none;
+  }
+  
+  @media(max-width:769px){
+  .login_container input{
+    width: 90%;
+  }
+  
+  }
+  
+  @media(max-width:500px){
+  .loginimg{
+    display: none;
+  }
+  .login_container{
+    width: 80%;
+  }
+  }
